@@ -90,7 +90,7 @@ public class DrawableBitmap extends DrawableObject {
      * Draw the bitmap at a given x,y position, expressed in pixels, with the
      * lower-left-hand-corner of the view being (0,0).
      * 
-     * @param gl  A pointer to the OpenGL context
+     * gl  A pointer to the OpenGL context
      * @param x  The number of pixels to offset this drawable's origin in the x-axis.
      * @param y  The number of pixels to offset this drawable's origin in the y-axis
      * @param scaleX The horizontal scale factor between the bitmap resolution and the display resolution.
@@ -185,11 +185,7 @@ public class DrawableBitmap extends DrawableObject {
      * parameters are not changed immediately The crop is updated on the
      * next call to draw().  Note that the image may be flipped by providing a negative width or
      * height.
-     * 
-     * @param left
-     * @param bottom
-     * @param width
-     * @param height
+     *
      */
     public void setCrop(int left, int bottom, int width, int height) {
         // Negative width and height values will flip the image.

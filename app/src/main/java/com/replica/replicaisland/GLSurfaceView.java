@@ -117,7 +117,7 @@ import android.view.SurfaceView;
  * standard Java cross-thread communication mechanism. In addition,
  * one relatively easy way to communicate with your renderer is
  * to call
- * {@link #queueEvent(Runnable)}. For example:
+ * For example:
  * <pre class="prettyprint">
  * class MyGLSurfaceView extends GLSurfaceView {
  *
@@ -270,7 +270,6 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
      * <li>{@link #getRenderMode()}
      * <li>{@link #onPause()}
      * <li>{@link #onResume()}
-     * <li>{@link #queueEvent(Runnable)}
      * <li>{@link #requestRender()}
      * <li>{@link #setRenderMode(int)}
      * </ul>
@@ -590,7 +589,7 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
      * communicate with the renderer from the UI thread, because that's where
      * input events are received. Clients can communicate using any of the
      * standard Java techniques for cross-thread communication, or they can
-     * use the {@link GLSurfaceView#queueEvent(Runnable)} convenience method.
+     * use the queueEvent() convenience method.
      * <p>
      * <h3>EGL Context Lost</h3>
      * There are situations where the EGL rendering context will be lost. This
@@ -914,7 +913,6 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
         /**
          * Initialize EGL for a given configuration spec.
-         * @param configSpec
          */
         public void start(){
             /*

@@ -57,7 +57,6 @@ public class Game extends AllocationGuard {
      * game does not actually begin running after this function is called (see start() below).
      * Also note that textures are not loaded from the resource pack by this function, as OpenGl
      * isn't yet available.
-     * @param context
      */
     public void bootstrap(Context context, int viewWidth, int viewHeight, int gameWidth, int gameHeight, int difficulty) {
         if (!mBootstrapComplete) {
